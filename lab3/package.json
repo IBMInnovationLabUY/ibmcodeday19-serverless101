@@ -1,0 +1,16 @@
+{
+  "name": "ibm-cloud-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "action.js",
+  "scripts": {
+    "create": "zip -r action.zip ./ && ibmcloud fn action create find_address action.zip --kind nodejs:10 && rm -rf action.zip",
+    "update": "zip -r action.zip ./ && ibmcloud fn action update find_address action.zip --kind nodejs:10 && rm -rf action.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Kazuyuki Shinya <vshinya@br.ibm.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
